@@ -1,0 +1,61 @@
+package TrabajosJava;
+
+import java.util.Scanner;
+
+public class TrabajoEnClases {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+	       
+	    String opcion = "";
+	        
+	    System.out.println("*Vamos a jugar ¡CAAAA-CHII-PUN!*");
+	      do {
+	    	  System.out.println("*Ingrese nombre del primer jugador*");
+		      String jugador1 = scanner.nextLine();
+		        
+		      System.out.println("*Ingrese el nombre del segundo jugador*");
+		      String jugador2 = scanner.nextLine();
+		        
+		      // Definimos jugadas
+		        
+		      System.out.println("Eligue tu jugada " + jugador1 + " : piedra, papel o tijeras ");
+		 	  String jugada1 = scanner.nextLine();
+
+		 	  System.out.println("Eligue tu jugada " + jugador2 + " : piedra, papel o tijeras ");
+		 	  String jugada2 = scanner.nextLine();
+		        	
+		      if( jugada1.equals("papel") || jugada1.equals("piedra") || jugada1.equals("tijeras")) {
+		        if (jugada2.equals("papel") ||  jugada2.equals("piedra") || jugada2.equals("tijeras")) {
+		         if(jugada1.equals(jugada2)) {
+		        	System.out.println("¡CAAAA-CHII-PUN!");			
+		        	System.out.println("Jugadores han quedado en empate");
+		        	
+		        	}else if ((jugada1.equals("piedra")&& jugada2.equals("tijeras"))|| 
+		        			 (jugada1.equals("papel")&& jugada2.equals("piedra")) ||
+		        			 (jugada1.equals("tijeras")&& jugada2.equals("papel"))) {
+		        	System.out.println("¡CAAAA-CHII-PUN!");	
+		        	System.out.println( "Jugador " + jugador1 + " a ganado la partida");
+		        			
+		        	}else {
+		        	System.out.println("¡CAAAA-CHII-PUN!");		
+		        	System.out.println( "Jugador " + jugador2 + " a ganado la partida");
+		        		}	
+		        		
+		        	}else {
+		        		System.out.println( jugador2 + " tu opcion es invalida");
+		        	}
+		        		
+		        	}else {
+		        		System.out.println( jugador1 + " tu opcion es invalida");
+		        	}
+		        
+		        System.out.println( " ¿desea volver a jugar ? Presione enter "); 
+		        opcion = scanner.nextLine().toLowerCase();
+	        	
+	        } while (!opcion.equals("si"));
+	        
+	      scanner.close();
+	 }
+}
