@@ -1,0 +1,73 @@
+
+* Piedra Papel Tijeras Reglas 
+
+
+Piedra, Papel, Tijeras es un juego de suma cero en el que dos o más jugadores eligen un movimiento: piedra, papel o tijeras.
+
+    Las Reglas para ganar son:
+    
+       - Piedra gana a  Tijeras.
+    
+       - Tijeras gana a  Papel.
+    
+       - Papel   gana a  Piedra.
+
+
+* Piedra Papel Tijeras Reglas (Tabla)
+
+                 | Jugador1 | Jugador2 | Resultado(Jugador1) |
+                 |----------+----------+---------------------|
+                 | Piedra   | Piedra   | Empate              |
+                 | Papel    | Papel    | Empate              |
+                 | Tijeras  | Tijeras  | Empate              |
+                 | Piedra   | Papel    | Pierde              |
+                 | Papel    | Tijeras  | Pierde              |
+                 | Tijeras  | Piedra   | Pierde              |
+                 | Piedra   | Tijeras  | Gana                |
+                 | Papel    | Piedra   | Gana                |
+                 | Tijeras  | Papel    | Gana                |
+
+
+
+* Piedra Papel Tijeras Reglas (Tabla: Empate)
+
+                 | Jugador1 | Jugador2 | Resultado(Jugador1) |
+                 |----------+----------+---------------------|
+                 | Piedra   | Piedra   | Empate              |
+                 | Papel    | Papel    | Empate              |
+                 | Tijeras  | Tijeras  | Empate              |
+
+
+* Piedra Papel Tijeras Reglas (Tabla: Pierde)
+
+                 | Jugador1 | Jugador2 | Resultado(Jugador1) |
+                 |----------+----------+---------------------|
+                 | Piedra   | Papel    | Pierde              |
+                 | Papel    | Tijeras  | Pierde              |
+                 | Tijeras  | Piedra   | Pierde              |
+
+
+* Piedra Papel Tijeras Reglas (Tabla: Gana)
+
+                 | Jugador1 | Jugador2 | Resultado(Jugador1) |
+                 |----------+----------+---------------------|
+                 | Piedra   | Tijeras  | Gana                |
+                 | Papel    | Piedra   | Gana                |
+                 | Tijeras  | Papel    | Gana                |
+
+
+
+* Tabla usada en el código  
+
+                 | Jugador1 | Jugador2 | Resultado     |
+                 |----------+----------+---------------|
+                 | Piedra   | Piedra   | Empate        |
+                 | Papel    | Papel    | Empate        |
+                 | Tijeras  | Tijeras  | Empate        |
+                 | Piedra   | Papel    | Gana Jugador2 |
+                 | Papel    | Tijeras  | Gana Jugador2 |
+                 | Tijeras  | Piedra   | Gana Jugador2 |
+                 | Piedra   | Tijeras  | Gana Jugador1 |
+                 | Papel    | Piedra   | Gana Jugador1 |
+                 | Tijeras  | Papel    | Gana Jugador1 |
+
