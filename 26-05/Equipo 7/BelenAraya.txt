@@ -1,0 +1,69 @@
+package desafio;
+import java.util.Scanner;
+
+public class desafio {
+
+	    public static void main(String[] args) {
+	        Scanner Pan = new Scanner(System.in);
+	        String option = "";
+	        //Belen araya desafio cachipun
+
+	        //Mensajes de ingreso
+	        System.out.println("¡Bienvenido al CA-CHI-PUN!");
+	        
+	        do {
+	        	System.out.println("Ingrese nombre jugador 1");
+	        	String nombre = Pan.nextLine();
+	        	
+	        	System.out.println("Ingrese nombre jugador 2");
+	        	String nombre2 = Pan.nextLine();
+	        	
+	        	 System.out.println("Jugador 1, ingresa tu elección (piedra, papel o tijera):");
+	 	        //toLowerCase ignore mayus y minusculas
+	 	        String jugador1 = Pan.nextLine().toLowerCase();
+	 	       if (jugador1.length() > 0 && (jugador1.charAt(jugador1.length() - 1) == 's' || jugador1.charAt(jugador1.length() - 1) == 'S')) {
+	 	        	jugador1 = jugador1.substring(0,jugador1.length()-1);
+	 	        }
+	 	        
+
+	 	        System.out.println("Jugador 2, ingresa tu elección (piedra, papel o tijera):");
+	 	        String jugador2 = Pan.nextLine().toLowerCase();
+	 	       if (jugador2.length() > 0 && (jugador2.charAt(jugador2.length() - 1) == 's' || jugador2.charAt(jugador2.length() - 1) == 'S')) {
+	 	    	  jugador2 = jugador2.substring(0,jugador2.length()-1);
+	 	        }
+	 	        
+	 	        //caso de empate
+	 	        if (jugador1.equals("piedra") || jugador1.equals("papel") || jugador1.equals("tijera")) {
+	 	            if (jugador2.equals("piedra") || jugador2.equals("papel") || jugador2.equals("tijera")) {
+	 	                if (jugador1.equals(jugador2)) {
+	 	                	System.out.println("¡CAAAA-CHII-PUN!");
+	 	                    System.out.println("¡Es un empate!");
+	 	                    
+	 	                    //caso que jugador 1 gane
+	 	                } else if ((jugador1.equals("piedra") && jugador2.equals("tijera")) ||
+	 	                        (jugador1.equals("papel") && jugador2.equals("piedra")) ||
+	 	                        (jugador1.equals("tijera") && jugador2.equals("papel"))) {
+	 	                	System.out.println("¡CAAAA-CHII-PUN!");
+	 	                    System.out.println("¡Jugador "+ nombre +" gana!");
+	 	                    
+	 	                    //caso jugador 2 gane
+	 	                } else {
+	 	                	System.out.println("¡CAAAA-CHII-PUN!");
+	 	                    System.out.println("¡Jugador "+ nombre2 +" gana!");
+	 	                }
+	 	                
+	 	                //opciones invalidas (No varita magica U:)
+	 	            } else {
+	 	                System.out.println("Elección del Jugador 2 invalida. Por favor, ingresa piedra, papel o tijera.");
+	 	            }
+	 	        } else {
+	 	            System.out.println("Elección del Jugador 1 invalida. Por favor, ingresa piedra, papel o tijera.");
+	 	        }
+	 	        System.out.println("Si desea salir digite 'salir' de lo contrario para continuar pulse [ENTER]");
+	 	        	option = Pan.nextLine().toLowerCase();
+	 	        	
+	        } while(!option.equals("salir")) ;
+	       
+	        Pan.close();
+	    }
+	}
